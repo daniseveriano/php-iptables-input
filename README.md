@@ -10,4 +10,6 @@ www-data ALL=NOPASSWD:/usr/sbin/iptables,/usr/sbin/script-iptables-erp.ini
 
 4- Guarde o arquivo "script-iptables-erp.ini" em um diretório protegido. Neste repositório, ele encontra-se no mesmo diretório local dos demais arquivos. Sugiro inseri-lo no mesmo diretório de inicialização do Iptables ("/usr/sbin/script-iptables-erp.ini"). Ao mover o arquivo para "/usr/sbin", lembre-se de alterar o caminho relativo nos diretórios, para leitura;
 
+5- O repositório já possui os arquivos de inicialização para o jQuery, bem como uma rota para o PhpMyAdmin, para caso queira gravar logs no banco de dados.
+
 5- Este arquivo foi construído como objeto de estudos. Caso resolva utilizá-lo, modifique-o conforme sua necessidade e nível de segurança.
