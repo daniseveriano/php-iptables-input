@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Servidor de Teste da Dani</title>
+    <title>Servidor de Teste</title>
 </head>
 <body>
     <div class="container">
@@ -22,8 +22,13 @@
         </span>
         <form action="firewall.php" method="POST" style="text-align: center;">
             <div>
-                <label for="ip">Digite o IP:</label>
-                <input id="ip" name="ip" type="text" value="">
+                <label for="ip">Selecione o IP:</label>
+                <select id="ip" name="ip" type="text">
+                    <option value="" selected></option>
+                    <option value="192.168.10.0/24">192.168.10.0/24</option>
+                    <option value="192.168.1.0/2">192.168.1.0/2</option>
+                    <option value="192.168.70.132">192.168.70.132</option>
+                </select>
             </div>
             <div id="id" style="margin-top: 25px;"></div>
             <div id="result" style="margin-top: 25px;"></div>

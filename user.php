@@ -1,8 +1,7 @@
 <?php
 
-$script = file_get_contents("/usr/sbin/script.json");
-$decoded = json_decode($script, true);
+$script = parse_ini_file("script-iptables-erp.ini");
 
-echo shell_exec("{$decoded['id']}");
+echo exec($script['id']);
 
 ?>

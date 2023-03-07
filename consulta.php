@@ -1,10 +1,10 @@
 <?php
 
-$script = file_get_contents("/usr/sbin/script.json");
-$decoded = json_decode($script, true);
+define("IP", $_POST['ip']);
+$script = parse_ini_file("script-iptables-erp.ini");
 
 if($_POST['ip']) {
-    $consulta = shell_exec("{$decoded['retorno']}{$decoded['consulta']}{$_POST['ip']}");
+    $consulta = exec($script['consulta']);
 
     if($consulta) {
         echo "IP encontrado:<br>{$consulta}<br>Caso o IP encontrado seja igual ao IP pesquisado, clique em Confirmar caso queira bloqueá-lo";

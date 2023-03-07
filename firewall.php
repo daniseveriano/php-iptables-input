@@ -1,19 +1,20 @@
 <?php
 
-$script = file_get_contents("/usr/sbin/script.json");
-$decoded = json_decode($script, true);
+define("IP", $_POST['ip']);
+$script = parse_ini_file("script-iptables-erp.ini");
 
 if($_POST['ip']) {
-    $consulta = shell_exec("{$decoded['retorno']}{$decoded['consulta']}{$_POST['ip']}");
+   
+   $consulta = exec($script['consulta']);
 
     if(!$consulta) {
-       shell_exec("cd / && sudo usr/sbin/iptables -A INPUT -s {$_POST['ip']} -p tcp -j ACCEPT");
-       echo "IP registrado com sucesso no servidor.";
+      exec($script['add']);
+      echo "IP registrado com sucesso no servidor.";
     }
 
     if($consulta) {
-       shell_exec("cd / && sudo usr/sbin/iptables -D INPUT -s {$_POST['ip']} -p tcp -j ACCEPT");
-       echo "IP deletado com sucesso do servidor.";
+      exec($script['delete']);
+      echo "IP deletado com sucesso do servidor.";
     }    
 }
 
