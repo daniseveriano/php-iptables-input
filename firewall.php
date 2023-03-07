@@ -1,9 +1,10 @@
 <?php
 
-// $script = parse_ini_file("/usr/sbin/script-iptables-erp.ini");
+$script = file_get_contents("/usr/sbin/script.json");
+$decoded = json_decode($script, true);
 
 if($_POST['ip']) {
-    $consulta = shell_exec("cd / && sudo usr/sbin/iptables -L -n |grep {$_POST['ip']}");
+    $consulta = shell_exec("{$decoded['retorno']}{$decoded['consulta']}{$_POST['ip']}");
 
     if(!$consulta) {
        shell_exec("cd / && sudo usr/sbin/iptables -A INPUT -s {$_POST['ip']} -p tcp -j ACCEPT");

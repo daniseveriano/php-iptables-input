@@ -49,6 +49,12 @@
 
                     $("#result").html(resposta);
 
+                    if(resposta.includes("IP encontrado")) {
+                        $("#result").css("color", "green");
+                    } else {
+                        $("#result").css("color", "red");
+                    }
+
                     }).fail(function(jqXHR, textStatus) {
 
                         $("#result").html("Request failed: " + textStatus);

@@ -1,0 +1,8 @@
+{
+    "id": "id -un",
+    "retorno": "cd / && ",
+    "consulta": "sudo /usr/sbin/iptables -L -n |grep ",
+    "add_inicio": "sudo /usr/sbin/iptables –A INPUT –s ",
+    "delete_inicio": "sudo /usr/sbin/iptables –D INPUT –s ",
+    "end": " –p tcp -j ACCEPT"
+}

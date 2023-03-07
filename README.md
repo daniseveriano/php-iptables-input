@@ -8,6 +8,6 @@
 root ALL=(ALL:ALL) ALL <br>
 www-data ALL=NOPASSWD:ALL
 
-4- Copie e cole o arquivo "script-iptables-erp.ini" dentro do mesmo diretório de onde se acessa o comando iptables (/usr/sbin);
+4- Copie e cole o arquivo "script.json" dentro do mesmo diretório de onde se acessa o comando iptables (/usr/sbin);
 
 5- Este arquivo foi construído como objeto de estudos. Caso resolva utilizá-lo, modifique-o conforme sua necessidade e nível de segurança.
