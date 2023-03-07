@@ -1,5 +1,7 @@
 1- Este script tem o objetivo de liberar/bloquear IPs através do Iptables no servidor Linux/Debian 11;
 
+2- Você precisa ter um servidor rodando em Linux, com o Apache2, PHP e Iptables ativos (PHP instalado como módulo do Apache);
+
 2- O usuário padrão do servidor Apache costumar ser o "www-data". Garanta que o mesmo recebeu liberação como super usuário (sudo), sem senha, acessando o arquivo sudoers pelo comando "visudo" (acesse esse comando no Linux pelo root);
 
 3- Sugestão de configuração do usuário, dentro do arquivo sudoers:
