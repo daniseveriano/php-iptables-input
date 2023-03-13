@@ -8,7 +8,7 @@
 
 #User privilege specification
 root ALL=(ALL:ALL) ALL
-www-data ALL=NOPASSWD:/usr/sbin/iptables,/usr/sbin/script-iptables-erp.ini
+www-data ALL=NOPASSWD:/usr/sbin/iptables
 
 Obs: verifique o caminho onde se encontra o iptables, dentro da distribuição que você usa. Isso pode ser feito através do comando "which iptables".
 
