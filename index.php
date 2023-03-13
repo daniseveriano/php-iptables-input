@@ -30,7 +30,7 @@
                                     <strong>Revise o número de IP digitado antes de salvar, verificando a posição dos pontos flutuantes!</strong> 
                                 </p>
                                 <p>
-                                    Após a confirmação, esta ação ficará salva no Banco de Dados, juntamente com seus dados de acesso ao ERP.
+                                    Após a confirmação, esta ação ficará salva no Banco de Dados, juntamente com seus dados de acesso.
                                 </p>
                             </div>
 
