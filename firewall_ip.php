@@ -58,7 +58,7 @@ if($outputConsulta[0] == false) {
 
         $codigo_usuario = 1;
         $usuario = "User";
-        $acao = 'Erro ao tentar deletar IP nº '.$_POST['ip'].'/32'.' no servidor '.$sistemaOperacional;
+        $acao = 'Erro ao tentar deletar IP nº '.$_POST['ip'].'/32'.' no servidor.';
         $parametros = $outputDeletar[0];
         $data = date('Y-m-d H:i:s');
 
@@ -71,7 +71,7 @@ if($outputConsulta[0] == false) {
 
         $codigo_usuario = 1;
         $usuario = "User";
-        $acao = 'Deletou o IP nº '.$_POST['ip'].'/32'.' no servidor '.$sistemaOperacional;
+        $acao = 'Deletou o IP nº '.$_POST['ip'].'/32'.' no servidor.';
         $parametros = "Ação realizada com sucesso {$outputDeletar[0]}";
         $data = date('Y-m-d H:i:s');
 
