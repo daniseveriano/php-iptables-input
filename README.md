@@ -6,9 +6,9 @@
 
 4- Sugestão de configuração do usuário, dentro do arquivo sudoers:
 
-#User privilege specification
-root ALL=(ALL:ALL) ALL
-www-data ALL=NOPASSWD:/usr/sbin/iptables
+`#User privilege specification`<br/>
+`root ALL=(ALL:ALL) ALL`<br/>
+`www-data ALL=NOPASSWD:/usr/sbin/iptables`<br/>
 
 Obs: verifique o caminho onde se encontra o iptables, dentro da distribuição que você usa. Isso pode ser feito através do comando "which iptables".
 
